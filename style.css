@@ -53,7 +53,7 @@ button {
 }
 
 #Gif {
-  width: 100px; /* Adjust as needed */
+  width: 50px; /* Adjust as needed */
   height: auto; /* Keeps the aspect ratio */
   vertical-align: top; /* Aligns top if next to buttons */
 }
