@@ -68,8 +68,9 @@ button {
 
 #loveMeImage {
   display: none;
-  width: 300px;
+  width: 100px;
   height: auto;
-  margin-top: 20px;
+  margin: 20px auto;
 }
+
 
