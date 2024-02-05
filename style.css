@@ -10,3 +10,11 @@ button {
   margin: 20px;
   cursor: pointer;
 }
+
+.hidden {
+  display: none;
+}
+
+.unhidden {
+  display: block;
+}
