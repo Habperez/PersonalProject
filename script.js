@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (attemptCount === maxLoveMeImageAttempts) {
-            loveMeImage.style.display = 'block';
+            loveMeImage.style.display = 'inline';
         }
     });
 
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question.textContent = 'Eu te amo muito meu amor';
         funnyGif.style.display = 'none'; // Hide the GIF
         usImage.style.display = 'none'; // Hide the "Us" image
+        loveMeImage.style.display = 'none';
 
         loveImage.src = 'Peanut.png'; // Verify this path is correct
         loveMessage.classList.remove('hidden');
