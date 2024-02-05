@@ -10,32 +10,26 @@ document.addEventListener('DOMContentLoaded', function() {
   const maxGifAttempts = 30;
 
   function moveButton() {
-    // This function will always be called, allowing the button to move.
-    noBtn.style.position = 'absolute';
-    noBtn.style.left = Math.random() * (window.innerWidth - noBtn.clientWidth) + 'px';
-    noBtn.style.top = Math.random() * (window.innerHeight - noBtn.clientHeight) + 'px';
+    if (attemptCount < maxNoAttempts || attemptCount >= maxGifAttempts) {
+      // Allows the button to move until it changes to an image,
+      // and continues moving after the GIF appears.
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = Math.random() * (window.innerWidth - noBtn.clientWidth) + 'px';
+      noBtn.style.top = Math.random() * (window.innerHeight - noBtn.clientHeight) + 'px';
+    }
   }
 
   noBtn.addEventListener('mouseover', function() {
     attemptCount++;
-    moveButton(); // Keep moving the button on each hover.
+    // This condition allows the "No" button to move indefinitely.
+    moveButton();
 
     if (attemptCount === maxNoAttempts) {
-      // Transform the "No" button into an image.
-      noBtn.classList.add('no-image-btn');
-      noBtn.innerHTML = '';
-      const img = document.createElement('img');
-      img.src = 'fern.jpg'; // Ensure this src points to your image.
-      img.alt = 'No';
-      img.style.width = '100px';
-      img.style.height = 'auto';
-      noBtn.appendChild(img);
+      transformNoButton();
     }
 
     if (attemptCount === maxGifAttempts) {
-      // Show the GIF next to the "Yes" button.
-      funnyGif.classList.remove('hidden');
-      funnyGif.classList.add('unhidden');
+      showGif();
     }
   });
 
