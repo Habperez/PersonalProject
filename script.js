@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     noBtn.addEventListener('mouseover', function() {
         attemptCount++;
-        console.log(attemptCount);
+        console.log("Attempt count:", attemptCount);
         moveButton();
         transformNoButtonIfNeeded();
 
