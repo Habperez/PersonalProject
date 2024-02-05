@@ -59,11 +59,11 @@ button {
 }
 
 #usImage {
-  width: 50px;
-  height: auto;
   display: none;
-  vertical-align: middle;
+  width: 100px !important;
+  height: auto !important;
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 #loveMeImage {
