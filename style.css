@@ -19,17 +19,11 @@ button {
   background: #fff;
   border: 2px solid #000;
   border-radius: 5px;
-  color: black;
-  box-shadow: 2px 2px 4px #000000;
-}
 
-#noBtn {
-  background: #fff;
-  border: 2px solid #000;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  color: black;
+  text-shadow: none; 
+  box-shadow: 2px 2px 4px #000000; 
 }
 
 .no-image-btn {
@@ -37,6 +31,19 @@ button {
   border: none;
   background: none;
 }
+
+
+#noBtn img {
+  width: 100px; 
+  height: auto;
+  cursor: pointer;
+  display: block;
+  margin: 0; 
+  padding: 0; 
+  border: none; 
+  background: none; 
+}
+
 
 .hidden {
   display: none;
