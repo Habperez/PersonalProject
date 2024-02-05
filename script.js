@@ -32,11 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function bounceImage() {
         const rect = bouncingImage.getBoundingClientRect();
-        if (rect.top <= 0 || rect.bottom >= window.innerHeight) dy *= -1;
-        if (rect.left <= 0 || rect.right >= window.innerWidth) dx *= -1;
+        if (rect.top <= 0 || rect.bottom >= window.innerHeight) dy = -dy;
+        if (rect.left <= 0 || rect.right >= window.innerWidth) dx = -dx;
+    
+        // Update the image's position
         bouncingImage.style.top = (bouncingImage.offsetTop + dy) + 'px';
         bouncingImage.style.left = (bouncingImage.offsetLeft + dx) + 'px';
     }
+
 
     noBtn.addEventListener('mouseover', function() {
         attemptCount++;
