@@ -6,20 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const loveImage = document.getElementById('loveImage');
 
   noBtn.addEventListener('mouseover', function() {
+    // Move the button to a random position
     noBtn.style.position = 'absolute';
     noBtn.style.left = Math.random() * (window.innerWidth - noBtn.clientWidth) + 'px';
     noBtn.style.top = Math.random() * (window.innerHeight - noBtn.clientHeight) + 'px';
   });
 
   yesBtn.addEventListener('click', function() {
-    // Hide the buttons
     yesBtn.style.display = 'none';
     noBtn.style.display = 'none';
 
     heading.textContent = 'I love you';
 
+
     loveImage.src = 'Peanut.png';
     loveMessage.classList.remove('hidden');
-    loveMessage.classList.add('unhidden');
+    // loveMessage.classList.add('unhidden');
   });
 });
