@@ -13,30 +13,27 @@ document.addEventListener('DOMContentLoaded', function() {
     noBtn.style.top = Math.random() * (window.innerHeight - noBtn.clientHeight) + 'px';
   }
 
-noBtn.addEventListener('mouseover', function() {
-  moveButton();
-  attemptCount++;
-  if (attemptCount === maxAttempts) {
-
-    noBtn.classList.add('no-image-btn');
-
-    noBtn.innerHTML = ''; 
-    const img = document.createElement('img');
-    img.src = 'fern.jpg'; 
-    img.alt = 'No';
-    img.style.width = '100px'; 
-    img.style.height = 'auto';
-    noBtn.appendChild(img);
-  }
-});
+  noBtn.addEventListener('mouseover', function() {
+    moveButton();
+    attemptCount++;
+    if (attemptCount === maxAttempts) {
+      noBtn.classList.add('no-image-btn');
+      
+      noBtn.innerHTML = '';
+      const img = document.createElement('img');
+      img.src = 'fern.jpg';
+      img.alt = 'No';
+      img.style.width = '100px';
+      img.style.height = 'auto';
+      noBtn.appendChild(img);
+    }
+  });
 
   yesBtn.addEventListener('click', function() {
- 
     yesBtn.style.display = 'none';
     noBtn.style.display = 'none';
     question.textContent = 'I love you';
 
-    // Show the love image
     loveImage.src = 'Peanut.png'; 
     loveMessage.classList.remove('hidden');
     loveMessage.classList.add('unhidden');
