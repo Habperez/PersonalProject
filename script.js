@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let dy = 2;
     let bounceInterval = null;
 
-    bouncingImage.style.top = '50%';
-    bouncingImage.style.left = '50%';
+    bouncingImage.style.top = '50vh';
+    bouncingImage.style.left = '50vw'
     bouncingImage.style.transform = 'translate(-50%, -50%)';
 
     function moveButton() {
@@ -26,8 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function transformNoButtonIfNeeded() {
         if (attemptCount >= maxNoImageAttempts && !noBtn.querySelector('img')) {
+            // Apply styles to remove any button-like appearance
+            noBtn.classList.add('no-image-btn');
             const img = document.createElement('img');
-            img.src = 'fern.jpg';
+            img.src = 'fern.jpg'; // Update the path to your image
             img.alt = 'No';
             img.style.width = '100px';
             noBtn.appendChild(img);
@@ -48,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         transformNoButtonIfNeeded();
 
         if (attemptCount === maxGifAttempts) {
-            funnyGif.classList.remove('hidden');
-            funnyGif.classList.add('unhidden');
+            Gif.classList.remove('hidden');
+            Gif.classList.add('unhidden');
         }
 
         if (attemptCount === maxBounceAttempts && !bounceInterval) {
@@ -62,7 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
         yesBtn.style.display = 'none';
         noBtn.style.display = 'none';
         question.textContent = 'I love you';
-        funnyGif.style.display = 'none';
+        Gif.style.display = 'none';
+        bouncingImage.style.display = 'none';
+        clearInterval(bounceInterval);
         
         if (bounceInterval) clearInterval(bounceInterval);
         bouncingImage.classList.add('hidden');
@@ -71,4 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loveMessage.classList.remove('hidden');
         loveMessage.classList.add('unhidden');
     });
+    if (!bouncingImage.classList.contains('hidden')) {
+        bounceInterval = setInterval(bounceImage, 10);
+    }
 });
