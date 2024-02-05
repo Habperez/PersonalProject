@@ -59,6 +59,7 @@ button {
 }
 
 #usImage {
+  width: 50px;
   display: none;
   vertical-align: middle;
 }
