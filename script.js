@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const loveImage = document.getElementById('loveImage');
 
   noBtn.addEventListener('mouseover', function() {
-    // Move the button to a random position
     noBtn.style.position = 'absolute';
     noBtn.style.left = Math.random() * (window.innerWidth - noBtn.clientWidth) + 'px';
     noBtn.style.top = Math.random() * (window.innerHeight - noBtn.clientHeight) + 'px';
