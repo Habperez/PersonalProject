@@ -28,7 +28,7 @@ button {
 .no-image-btn {
   padding: 0;
   border: none;
-  background: none;
+  background: transparent;
   box-shadow: none;
   text-shadow: none;
 }
