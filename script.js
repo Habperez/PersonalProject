@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (attemptCount === 100) {
+            console.log("Reached 100 attempts");
             document.getElementById('question').style.display = 'none';
             document.getElementById('loveMessage').style.display = 'none';
             document.getElementById('Gif').style.display = 'none';
