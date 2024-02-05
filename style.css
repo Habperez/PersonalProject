@@ -29,7 +29,10 @@ button {
   padding: 0;
   border: none;
   background: none;
+  box-shadow: none;
+  text-shadow: none;
 }
+
 
 
 #noBtn img {
