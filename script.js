@@ -4,15 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const question = document.getElementById('question');
   const loveMessage = document.getElementById('loveMessage');
   const loveImage = document.getElementById('loveImage');
-  const funnyGif = document.getElementById('Gif'); // Ensure this ID matches your GIF's ID in HTML
+  const funnyGif = document.getElementById('Gif');
   let attemptCount = 0;
   const maxNoAttempts = 15;
   const maxGifAttempts = 30;
 
   function moveButton() {
     if (attemptCount < maxNoAttempts || attemptCount >= maxGifAttempts) {
-      // Allows the button to move until it changes to an image,
-      // and continues moving after the GIF appears.
+
       noBtn.style.position = 'absolute';
       noBtn.style.left = Math.random() * (window.innerWidth - noBtn.clientWidth) + 'px';
       noBtn.style.top = Math.random() * (window.innerHeight - noBtn.clientHeight) + 'px';
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   noBtn.addEventListener('mouseover', function() {
     attemptCount++;
-    // This condition allows the "No" button to move indefinitely.
     moveButton();
 
     if (attemptCount === maxNoAttempts) {
@@ -38,11 +36,12 @@ yesBtn.addEventListener('click', function() {
   noBtn.style.display = 'none';
   question.textContent = 'I love you';
   
-  Gif.classList.add('hidden');
-  Gif.classList.remove('unhidden');
+  const gifElement = document.getElementById('Gif');
+  gifElement.style.display = 'none';
   
   loveImage.src = 'Peanut.png';
   loveMessage.classList.remove('hidden');
   loveMessage.classList.add('unhidden');
 });
+
 });
