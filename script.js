@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loveImage.src = 'Peanut.png';
     loveMessage.classList.remove('hidden');
     loveMessage.classList.add('unhidden');
-});
+  });
   
-  <img id="bouncingImage" src="Us.png" alt="Bouncing" class="hidden" style="position: absolute; top: 0; left: 0;" />
 });
