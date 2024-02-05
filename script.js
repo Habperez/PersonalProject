@@ -19,11 +19,10 @@ noBtn.addEventListener('mouseover', function() {
   if (attemptCount === maxAttempts) {
 
     noBtn.classList.add('no-image-btn');
-    
 
-    noBtn.innerHTML = '';
-    const img = new Image();
-    img.src = 'fern.jpg';
+    noBtn.innerHTML = ''; 
+    const img = document.createElement('img');
+    img.src = 'fern.jpg'; 
     img.alt = 'No';
     img.style.width = '100px'; 
     img.style.height = 'auto';
