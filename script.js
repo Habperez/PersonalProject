@@ -31,17 +31,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-yesBtn.addEventListener('click', function() {
-  yesBtn.style.display = 'none';
-  noBtn.style.display = 'none';
-  question.textContent = 'I love you';
-  
-  const gifElement = document.getElementById('Gif');
-  gifElement.style.display = 'none';
-  
-  loveImage.src = 'Peanut.png';
-  loveMessage.classList.remove('hidden');
-  loveMessage.classList.add('unhidden');
+  yesBtn.addEventListener('click', function() {
+    yesBtn.style.display = 'none';
+    noBtn.style.display = 'none';
+    question.textContent = 'I love you';
+    
+    const gifElement = document.getElementById('Gif');
+    gifElement.style.display = 'none';
+    
+    loveImage.src = 'Peanut.png';
+    loveMessage.classList.remove('hidden');
+    loveMessage.classList.add('unhidden');
 });
-
+  
+  <img id="bouncingImage" src="Us.png" alt="Bouncing" class="hidden" style="position: absolute; top: 0; left: 0;" />
 });
