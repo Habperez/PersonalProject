@@ -1,7 +1,7 @@
 body {
   text-align: center;
   padding-top: 100px;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-image: url('stars.jpg');
   background-size: cover;
   background-position: center;
@@ -15,14 +15,12 @@ button {
   margin: 20px;
   cursor: pointer;
   background: #fff;
-  border: none;
+  border: 2px solid #000;
   border-radius: 5px;
 }
 
-#noBtn img {
-  width: 100px; /* Adjust as needed */
-  height: auto;
-  cursor: pointer;
+#noBtn {
+  position: relative;
 }
 
 .hidden {
