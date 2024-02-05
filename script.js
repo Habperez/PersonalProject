@@ -5,10 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const loveMessage = document.getElementById('loveMessage');
     const loveImage = document.getElementById('loveImage');
     const funnyGif = document.getElementById('Gif');
-    const usImage = document.getElementById('usImage'); // Get the "Us" image element
+    const usImage = document.getElementById('usImage'); // Make sure this is the ID in your HTML
     let attemptCount = 0;
     const maxNoImageAttempts = 15;
     const maxGifAttempts = 30;
+    const maxUsImageAttempts = 40;
 
     function moveButton() {
         noBtn.style.position = 'absolute';
@@ -18,12 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function transformNoButtonIfNeeded() {
         if (attemptCount >= maxNoImageAttempts && !noBtn.querySelector('img')) {
-            // Add the 'no-image-btn' class to change the button to an image
             noBtn.classList.add('no-image-btn');
             const img = document.createElement('img');
-            img.src = 'fern.jpg'; // Update the path to your image
+            img.src = 'fern.jpg'; // Verify this path is correct
             img.alt = 'No';
-            img.style.width = '100px'; // Set the image size
+            img.style.width = '100px';
             noBtn.appendChild(img);
         }
     }
@@ -38,24 +38,19 @@ document.addEventListener('DOMContentLoaded', function() {
             funnyGif.classList.add('unhidden');
         }
 
-        // After 40 attempts, show the "Us" image next to the "Yes" button
-        if (attemptCount === 40) {
-            usImage.style.display = 'inline';
+        if (attemptCount === maxUsImageAttempts) {
+            usImage.style.display = 'inline'; // This will show the "Us" image
         }
     });
 
     yesBtn.addEventListener('click', function() {
-        // Hide the "Yes" and "No" buttons and the question
         yesBtn.style.display = 'none';
         noBtn.style.display = 'none';
         question.textContent = 'I love you';
-
-        // Hide the GIF and the "Us" image
-        funnyGif.style.display = 'none';
+        funnyGif.style.display = 'none'; // Hide the GIF
         usImage.style.display = 'none'; // Hide the "Us" image
 
-        // Show the love message and image
-        loveImage.src = 'Peanut.png'; // Make sure this is the correct path
+        loveImage.src = 'Peanut.png'; // Verify this path is correct
         loveMessage.classList.remove('hidden');
         loveMessage.classList.add('unhidden');
     });
