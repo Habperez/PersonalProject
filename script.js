@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (attemptCount === maxLoveMeImageAttempts) {
-            loveMeImage.style.display = 'block';
+            loveMeImage.style.display = 'flex';
         }
     });
 
