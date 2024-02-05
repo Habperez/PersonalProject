@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const img = new Image();
       img.src = 'fern.jpg';
       img.alt = 'No';
-      img.style.width = '1389px'; 
+      img.style.width = '100px'; 
       img.style.height = 'auto';
       noBtn.appendChild(img);
     }
