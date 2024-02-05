@@ -10,8 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const maxNoImageAttempts = 15;
     const maxGifAttempts = 30;
     const maxBounceAttempts = 40;
-    let dx = 2; // Speed for bouncing image along X-axis
-    let dy = 2; // Speed for bouncing image along Y-axis
+    let dx = 2;
+    let dy = 2;
+    let bounceInterval = null;
+
+    bouncingImage.style.top = '50%';
+    bouncingImage.style.left = '50%';
+    bouncingImage.style.transform = 'translate(-50%, -50%)';
 
     function moveButton() {
         noBtn.style.position = 'absolute';
@@ -20,10 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function transformNoButtonIfNeeded() {
-        if (attemptCount === maxNoImageAttempts && !noBtn.querySelector('img')) {
-            noBtn.innerHTML = ''; // Clear the button text for the image
+        if (attemptCount >= maxNoImageAttempts && !noBtn.querySelector('img')) {
             const img = document.createElement('img');
-            img.src = 'fern.jpg'; // Update the path to your image
+            img.src = 'fern.jpg';
             img.alt = 'No';
             img.style.width = '100px';
             noBtn.appendChild(img);
@@ -34,12 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const rect = bouncingImage.getBoundingClientRect();
         if (rect.top <= 0 || rect.bottom >= window.innerHeight) dy = -dy;
         if (rect.left <= 0 || rect.right >= window.innerWidth) dx = -dx;
-    
-        // Update the image's position
         bouncingImage.style.top = (bouncingImage.offsetTop + dy) + 'px';
         bouncingImage.style.left = (bouncingImage.offsetLeft + dx) + 'px';
     }
-
 
     noBtn.addEventListener('mouseover', function() {
         attemptCount++;
@@ -51,9 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
             funnyGif.classList.add('unhidden');
         }
 
-        if (attemptCount === maxBounceAttempts) {
+        if (attemptCount === maxBounceAttempts && !bounceInterval) {
             bouncingImage.classList.remove('hidden');
-            setInterval(bounceImage, 10);
+            bounceInterval = setInterval(bounceImage, 10);
         }
     });
 
@@ -63,6 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
         question.textContent = 'I love you';
         funnyGif.style.display = 'none';
         
+        if (bounceInterval) clearInterval(bounceInterval);
+        bouncingImage.classList.add('hidden');
+
         loveImage.src = 'Peanut.png';
         loveMessage.classList.remove('hidden');
         loveMessage.classList.add('unhidden');
