@@ -73,9 +73,3 @@ button {
   margin-top: 20px;
 }
 
-#interactionArea {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
