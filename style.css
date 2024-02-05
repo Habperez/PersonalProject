@@ -2,12 +2,26 @@ body {
   text-align: center;
   padding-top: 100px;
   font-family: Arial, sans-serif;
+  background-image: url('stars-background.jpg'); /* Replace with your stars image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 button {
   font-size: 20px;
   padding: 10px 20px;
   margin: 20px;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+#noBtn img {
+  width: 100px; /* Adjust as needed */
+  height: auto;
   cursor: pointer;
 }
 
