@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loveMessage = document.getElementById('loveMessage');
     const loveImage = document.getElementById('loveImage');
     const funnyGif = document.getElementById('Gif');
-    const usImage = document.getElementById('usImage'); // Make sure this is the ID in your HTML
+    const usImage = document.getElementById('usImage'); // Get the "Us" image element
     let attemptCount = 0;
     const maxNoImageAttempts = 15;
     const maxGifAttempts = 30;
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function transformNoButtonIfNeeded() {
         if (attemptCount >= maxNoImageAttempts && !noBtn.querySelector('img')) {
+            // Add the 'no-image-btn' class to change the button to an image
             noBtn.classList.add('no-image-btn');
             const img = document.createElement('img');
             img.src = 'fern.jpg'; // Verify this path is correct
