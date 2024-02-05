@@ -33,12 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  yesBtn.addEventListener('click', function() {
-    yesBtn.style.display = 'none';
-    noBtn.style.display = 'none';
-    question.textContent = 'I love you';
-    loveImage.src = 'Peanut.png'; // Ensure this src points to your image.
-    loveMessage.classList.remove('hidden');
-    loveMessage.classList.add('unhidden');
-  });
+yesBtn.addEventListener('click', function() {
+  yesBtn.style.display = 'none';
+  noBtn.style.display = 'none';
+  question.textContent = 'I love you';
+  
+  Gif.classList.add('hidden');
+  Gif.classList.remove('unhidden');
+  
+  loveImage.src = 'Peanut.png';
+  loveMessage.classList.remove('hidden');
+  loveMessage.classList.add('unhidden');
+});
 });
