@@ -72,3 +72,13 @@ button {
   height: auto;
   margin: 20px auto;
 }
+
+.yesButtonLarge {
+  font-size: 40px;
+  padding: 20px 40px;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
