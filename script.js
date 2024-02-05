@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const loveMessage = document.getElementById('loveMessage');
     const loveImage = document.getElementById('loveImage');
     const funnyGif = document.getElementById('Gif');
-    const usImage = document.getElementById('usImage'); // Get the "Us" image element
+    const usImage = document.getElementById('usImage');
+    const loveMeImage = document.getElementById('loveMeImage');
     let attemptCount = 0;
     const maxNoImageAttempts = 15;
     const maxGifAttempts = 30;
     const maxUsImageAttempts = 40;
+    const maxLoveMeImageAttempts = 60;
 
     function moveButton() {
         noBtn.style.position = 'absolute';
@@ -40,7 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (attemptCount === maxUsImageAttempts) {
-            usImage.style.display = 'inline'; // This will show the "Us" image
+            usImage.style.display = 'inline';
+        }
+
+        if (attemptCount === maxLoveMeImageAttempts) {
+            loveMeImage.style.display = 'block';
         }
     });
 
