@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (attemptCount === maxUsImageAttempts) {
-            usImage.style.display = 'inline';
+            usImage.style.display = 'block';
         }
 
         if (attemptCount === maxLoveMeImageAttempts) {
