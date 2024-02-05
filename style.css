@@ -7,6 +7,8 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 button {
@@ -17,10 +19,21 @@ button {
   background: #fff;
   border: 2px solid #000;
   border-radius: 5px;
+  color: black;
+  box-shadow: 2px 2px 4px #000000;
 }
 
 #noBtn {
-  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+#noBtn img {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  border: 0; 
 }
 
 .hidden {
