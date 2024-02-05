@@ -30,10 +30,12 @@ button {
 }
 
 #noBtn img {
-  width: 200px;
+  width: 100px;
   height: auto;
   cursor: pointer;
-  border: 0; 
+  border: 0;
+  background: none;
+  display: block;
 }
 
 .hidden {
