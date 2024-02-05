@@ -2,7 +2,7 @@ body {
   text-align: center;
   padding-top: 100px;
   font-family: Arial, sans-serif;
-  background-image: url('stars-background.jpg'); /* Replace with your stars image path */
+  background-image: url('stars.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
