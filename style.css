@@ -53,8 +53,12 @@ button {
 }
 
 #Gif {
-  width: 50px; /* Adjust as needed */
-  height: auto; /* Keeps the aspect ratio */
-  vertical-align: top; /* Aligns top if next to buttons */
+  width: 50px;
+  height: auto;
+  vertical-align: top; 
 }
 
+#usImage {
+  display: none;
+  vertical-align: middle;
+}
