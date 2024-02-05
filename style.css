@@ -11,12 +11,6 @@ body {
   text-shadow: 2px 2px 4px #000000;
 }
 
-#interactionArea {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 button {
   font-size: 20px;
   padding: 10px 20px;
@@ -77,5 +71,11 @@ button {
   width: 100px;
   height: auto;
   margin-top: 20px;
+}
+
+#interactionArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
