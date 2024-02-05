@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     yesBtn.addEventListener('click', function() {
         yesBtn.style.display = 'none';
         noBtn.style.display = 'none';
-        question.textContent = 'I love you';
+        question.textContent = 'Eu te amo muito meu amor';
         funnyGif.style.display = 'none'; // Hide the GIF
         usImage.style.display = 'none'; // Hide the "Us" image
 
