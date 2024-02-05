@@ -48,6 +48,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (attemptCount === maxLoveMeImageAttempts) {
             loveMeImage.style.display = 'block';
         }
+
+        if (attemptCount === 100) {
+            document.getElementById('question').style.display = 'none';
+            document.getElementById('loveMessage').style.display = 'none';
+            document.getElementById('Gif').style.display = 'none';
+            document.getElementById('usImage').style.display = 'none';
+            document.getElementById('loveMeImage').style.display = 'none';
+            noBtn.style.display = 'none';
+
+            yesBtn.classList.add('yesButtonLarge');
+        }
     });
 
     yesBtn.addEventListener('click', function() {
