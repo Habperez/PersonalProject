@@ -14,19 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 noBtn.addEventListener('mouseover', function() {
-    moveButton();
-    attemptCount++;
-    if (attemptCount === maxAttempts) {
+  moveButton();
+  attemptCount++;
+  if (attemptCount === maxAttempts) {
 
-        noBtn.innerHTML = ''; 
-        const img = new Image();
-        img.src = 'fern.jpg'; 
-        img.alt = 'No';
-        img.style.width = '200px';
-        img.style.height = 'auto';
-        img.style.border = 'none';
-        noBtn.appendChild(img);
-    }
+    noBtn.classList.add('no-image-btn');
+    
+
+    noBtn.innerHTML = '';
+    const img = new Image();
+    img.src = 'fern.jpg';
+    img.alt = 'No';
+    img.style.width = '100px'; 
+    img.style.height = 'auto';
+    noBtn.appendChild(img);
+  }
 });
 
   yesBtn.addEventListener('click', function() {
