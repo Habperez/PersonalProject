@@ -60,12 +60,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    yesBtn.addEventListener('click', function() {
-        // Display the love message and image
-        question.textContent = 'Eu te amo muito meu amor. ♥';
-        loveImage.src = 'Peanut.png'; // Ensure this path is correct
-        loveMessage.classList.remove('hidden');
-        loveMessage.classList.add('unhidden');
-        // Reset the "Yes" button size if needed or perform other actions
-    });
+yesBtn.addEventListener('click', function() {
+    document.getElementById('question').style.display = 'none';
+    document.getElementById('Gif').style.display = 'none';
+    document.getElementById('usImage').style.display = 'none';
+    document.getElementById('loveMeImage').style.display = 'none';
+    noBtn.style.display = 'none';
+    loveMessage.textContent = 'Eu te amo muito meu amor. ♥';
+    loveMessage.style.display = "block";
+
+    loveImage.src = 'Peanut.png';
+    loveImage.style.display = 'block';
+
+    yesBtn.classList.remove('yesButtonLarge');
+    yesBtn.style.position = 'static';
+    yesBtn.style.transform = 'none';
+    yesBtn.style.fontSize = '20px';
+    yesBtn.style.padding = '10px 20px';
+});
+
 });
