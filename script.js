@@ -63,16 +63,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    yesBtn.addEventListener('click', function() {
-        yesBtn.style.display = 'none';
+        yesBtn.addEventListener('click', function() {
+        // Hide the no button and any other non-relevant elements
         noBtn.style.display = 'none';
-        question.textContent = 'Eu te amo muito meu amor. ♥';
-        funnyGif.style.display = 'none'; // Hide the GIF
-        usImage.style.display = 'none'; // Hide the "Us" image
+        funnyGif.style.display = 'none';
+        usImage.style.display = 'none';
         loveMeImage.style.display = 'none';
-
-        loveImage.src = 'Peanut.png'; // Verify this path is correct
-        loveMessage.classList.remove('hidden');
-        loveMessage.classList.add('unhidden');
+    
+        // Make sure the elements for the "I love you" screen are visible
+        question.style.display = 'block'; // Assuming you want to show any text updates here
+        question.textContent = 'Eu te amo muito meu amor. ♥';
+        loveMessage.style.display = 'block'; // Ensure the love message container is visible
+        loveImage.src = 'Peanut.png'; // Ensure this path is correct
+        loveImage.style.display = 'block'; // Make the peanut image visible
+    
+        // Reset the yes button to its original style if needed
+        yesBtn.classList.remove('yesButtonLarge'); // Consider removing if you want to keep the large size
     });
+
 });
