@@ -63,22 +63,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-        yesBtn.addEventListener('click', function() {
-        // Hide the no button and any other non-relevant elements
-        noBtn.style.display = 'none';
-        funnyGif.style.display = 'none';
-        usImage.style.display = 'none';
-        loveMeImage.style.display = 'none';
+    yesBtn.addEventListener('click', function() {
+        // Hide elements that are not needed for the "I love you" screen
+        document.getElementById('Gif').style.display = 'none'; // Hide the GIF
+        document.getElementById('usImage').style.display = 'none'; // Hide the "Us" image
+        document.getElementById('loveMeImage').style.display = 'none'; // Hide the "Love Me" image
+        noBtn.style.display = 'none'; // Hide the "No" button
     
-        // Make sure the elements for the "I love you" screen are visible
-        question.style.display = 'block'; // Assuming you want to show any text updates here
-        question.textContent = 'Eu te amo muito meu amor. ♥';
-        loveMessage.style.display = 'block'; // Ensure the love message container is visible
-        loveImage.src = 'Peanut.png'; // Ensure this path is correct
-        loveImage.style.display = 'block'; // Make the peanut image visible
+        // Optional: If you have other elements that should be hidden, hide them here as well
     
-        // Reset the yes button to its original style if needed
-        yesBtn.classList.remove('yesButtonLarge'); // Consider removing if you want to keep the large size
+        // Make the "I love you" message visible and update its text
+        // If 'question' is where the initial question was displayed and you want to reuse it
+        question.textContent = 'Eu te amo muito meu amor. ♥'; // Update the text content
+        question.style.display = "block"; // Make sure it is visible
+    
+        // Show the love message container if it's separate from 'question'
+        loveMessage.style.display = "block"; 
+    
+        // Display the peanut image
+        loveImage.src = 'Peanut.png'; // Make sure this path is correct
+        loveImage.style.display = 'block'; // Ensure the image is visible
+    
+        // Reset the "Yes" button appearance if needed
+        yesBtn.classList.remove('yesButtonLarge'); // Remove the large button class to reset its size
+        // Additional style resets for the "Yes" button can be applied here if necessary
     });
+
 
 });
