@@ -65,9 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     yesBtn.addEventListener('click', function() {
         // Hide elements that are not needed for the "I love you" screen
-        document.getElementById('Gif').style.display = 'none'; // Hide the GIF
-        document.getElementById('usImage').style.display = 'none'; // Hide the "Us" image
-        document.getElementById('loveMeImage').style.display = 'none'; // Hide the "Love Me" image
+        funnyGif.style.display = 'none'; // Hide the GIF
+        usImage.style.display = 'none'; // Hide the "Us" image
+        loveMeImage.style.display = 'none'; // Hide the "Love Me" image
         noBtn.style.display = 'none'; // Hide the "No" button
     
         // Optional: If you have other elements that should be hidden, hide them here as well
@@ -75,10 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Make the "I love you" message visible and update its text
         // If 'question' is where the initial question was displayed and you want to reuse it
         question.textContent = 'Eu te amo muito meu amor. ♥'; // Update the text content
-        question.style.display = "block"; // Make sure it is visible
+        question.style.display = 'block'; // Make sure it is visible
     
         // Show the love message container if it's separate from 'question'
-        loveMessage.style.display = "block"; 
+        loveMessage.style.display = 'block';
     
         // Display the peanut image
         loveImage.src = 'Peanut.png'; // Make sure this path is correct
@@ -88,6 +88,5 @@ document.addEventListener('DOMContentLoaded', function() {
         yesBtn.classList.remove('yesButtonLarge'); // Remove the large button class to reset its size
         // Additional style resets for the "Yes" button can be applied here if necessary
     });
-
 
 });
