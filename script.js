@@ -59,12 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('loveMeImage').style.display = 'none';
             noBtn.style.display = 'none';
 
-            yesBtn.style.fontSize = '40px';
-            yesBtn.style.padding = '20px 40px';
+            yesBtn.style.fontSize = '100px';
+            yesBtn.style.padding = '50px 80px';
             yesBtn.style.position = 'absolute';
             yesBtn.style.left = '50%';
             yesBtn.style.top = '50%';
             yesBtn.style.transform = 'translate(-50%, -50%)';
+            yesBtn.style.borderRadius = '10px';
         }
     });
 
